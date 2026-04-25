@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gmail-task-checker"
+version = "0.1.0"
+description = "Read-only Gmail window + optional OpenAI executive report and DOCX export"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "google-api-python-client>=2.130.0",
+    "google-auth-httplib2>=0.2.0",
+    "google-auth-oauthlib>=1.2.0",
+    "openai>=1.40.0",
+    "anthropic>=0.40.0",
+    "python-docx>=1.1.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+gmail-check = "gmail_task_checker.cli:main"
+gmail-agent-report = "gmail_task_checker.agent_report:main"
+granola-notes = "gmail_task_checker.granola_cli:main"
+
+[tool.setuptools.packages.find]
+include = ["gmail_task_checker*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
