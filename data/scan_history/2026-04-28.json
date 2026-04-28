@@ -1,0 +1,2613 @@
+{
+  "scan_date": "2026-04-28",
+  "scan_timestamp": "2026-04-28T11:43:05.883468+00:00",
+  "summary": {
+    "markets_scored": 13,
+    "properties_scanned": 20,
+    "properties_passed": 15,
+    "properties_rejected": 5,
+    "alerts_total": 7,
+    "alerts_new": 2,
+    "alerts_immediate": 0,
+    "listing_source": "seed data (no RAPIDAPI_KEY set)"
+  },
+  "markets": [
+    {
+      "rank": 1,
+      "market_id": "sc_hilton_head_beaufort",
+      "name": "Hilton Head Island",
+      "state": "SC",
+      "category": "coastal_sc",
+      "composite_score": 71.0,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.71,
+      "peak_occupancy_rate": 0.92,
+      "median_adr_3bd": 440.0,
+      "adr_yoy_growth": 0.04,
+      "annual_revpan": 272.0,
+      "active_listings": 6200,
+      "listings_yoy_growth": 0.05,
+      "median_home_price": 820000,
+      "home_price_yoy_appreciation": 0.05,
+      "nearest_airport_code": "HHH",
+      "nearest_airport_drive_min": 12,
+      "beach_access_tier": 1,
+      "golf_courses_30mi": 28,
+      "regulatory_status": "evolving_benign",
+      "regulatory_notes": "Town permit required ($150/yr). SC HB 3525 allows local registration but prohibits outright bans. Stable since 2021.",
+      "regulatory_alert": false,
+      "viable_for_cash_purchase": true,
+      "viable_for_financed_purchase": false,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 56.0,
+          "weight": 0.18,
+          "weighted": 10.08,
+          "note": "Town permit required ($150/yr). SC HB 3525 allows local registration but prohibi"
+        },
+        {
+          "name": "occupancy",
+          "score": 77.5,
+          "weight": 0.15,
+          "weighted": 11.62,
+          "note": "Annual 71.0%  |  Peak 92.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 60.0,
+          "weight": 0.12,
+          "weighted": 7.2,
+          "note": "ADR YoY +4.0%  |  Current $440/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 50.0,
+          "weight": 0.12,
+          "weighted": 6.0,
+          "note": "Home price YoY +5.0%  |  Median $820,000"
+        },
+        {
+          "name": "revpan",
+          "score": 80.0,
+          "weight": 0.1,
+          "weighted": 8.0,
+          "note": "RevPAN $272/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 64.0,
+          "weight": 0.08,
+          "weighted": 5.12,
+          "note": "Peak premium +21.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 80.0,
+          "weight": 0.08,
+          "weighted": 6.4,
+          "note": "+5.0% new supply  |  6,200 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 98.0,
+          "weight": 0.07,
+          "weighted": 6.86,
+          "note": "HHH  12 min  (within preference)"
+        },
+        {
+          "name": "beach",
+          "score": 100.0,
+          "weight": 0.05,
+          "weighted": 5.0,
+          "note": "Oceanfront"
+        },
+        {
+          "name": "golf",
+          "score": 93.3,
+          "weight": 0.05,
+          "weighted": 4.67,
+          "note": "28 courses within 30 mi"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "market_id": "sc_pawleys_georgetown",
+      "name": "Pawleys Island / Litchfield Beach",
+      "state": "SC",
+      "category": "coastal_sc",
+      "composite_score": 69.0,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.63,
+      "peak_occupancy_rate": 0.85,
+      "median_adr_3bd": 310.0,
+      "adr_yoy_growth": 0.05,
+      "annual_revpan": 173.0,
+      "active_listings": 1100,
+      "listings_yoy_growth": 0.07,
+      "median_home_price": 560000,
+      "home_price_yoy_appreciation": 0.05,
+      "nearest_airport_code": "MYR",
+      "nearest_airport_drive_min": 28,
+      "beach_access_tier": 1,
+      "golf_courses_30mi": 22,
+      "regulatory_status": "stable",
+      "regulatory_notes": "Georgetown County is STR-permissive. No active restriction proposals. Light registration only.",
+      "regulatory_alert": false,
+      "viable_for_cash_purchase": true,
+      "viable_for_financed_purchase": false,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 92.0,
+          "weight": 0.18,
+          "weighted": 16.56,
+          "note": "Georgetown County is STR-permissive. No active restriction proposals. Light regi"
+        },
+        {
+          "name": "occupancy",
+          "score": 57.5,
+          "weight": 0.15,
+          "weighted": 8.62,
+          "note": "Annual 63.0%  |  Peak 85.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 65.0,
+          "weight": 0.12,
+          "weighted": 7.8,
+          "note": "ADR YoY +5.0%  |  Current $310/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 50.0,
+          "weight": 0.12,
+          "weighted": 6.0,
+          "note": "Home price YoY +5.0%  |  Median $560,000"
+        },
+        {
+          "name": "revpan",
+          "score": 38.8,
+          "weight": 0.1,
+          "weighted": 3.88,
+          "note": "RevPAN $173/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 68.0,
+          "weight": 0.08,
+          "weighted": 5.44,
+          "note": "Peak premium +22.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 72.0,
+          "weight": 0.08,
+          "weighted": 5.76,
+          "note": "+7.0% new supply  |  1,100 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 90.0,
+          "weight": 0.07,
+          "weighted": 6.3,
+          "note": "MYR  28 min  (within preference)"
+        },
+        {
+          "name": "beach",
+          "score": 100.0,
+          "weight": 0.05,
+          "weighted": 5.0,
+          "note": "Oceanfront"
+        },
+        {
+          "name": "golf",
+          "score": 73.3,
+          "weight": 0.05,
+          "weighted": 3.67,
+          "note": "22 courses within 30 mi"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "market_id": "sc_isle_of_palms_charleston",
+      "name": "Isle of Palms / Sullivan's Island",
+      "state": "SC",
+      "category": "coastal_sc",
+      "composite_score": 68.9,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.68,
+      "peak_occupancy_rate": 0.9,
+      "median_adr_3bd": 405.0,
+      "adr_yoy_growth": 0.03,
+      "annual_revpan": 242.0,
+      "active_listings": 1400,
+      "listings_yoy_growth": 0.04,
+      "median_home_price": 1050000,
+      "home_price_yoy_appreciation": 0.06,
+      "nearest_airport_code": "CHS",
+      "nearest_airport_drive_min": 32,
+      "beach_access_tier": 1,
+      "golf_courses_30mi": 18,
+      "regulatory_status": "evolving_benign",
+      "regulatory_notes": "IOP requires rental permit and annual inspection. Sullivan's Island near-ban on STR. Stick to IOP properties.",
+      "regulatory_alert": false,
+      "viable_for_cash_purchase": true,
+      "viable_for_financed_purchase": false,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 68.0,
+          "weight": 0.18,
+          "weighted": 12.24,
+          "note": "IOP requires rental permit and annual inspection. Sullivan's Island near-ban on "
+        },
+        {
+          "name": "occupancy",
+          "score": 70.0,
+          "weight": 0.15,
+          "weighted": 10.5,
+          "note": "Annual 68.0%  |  Peak 90.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 55.0,
+          "weight": 0.12,
+          "weighted": 6.6,
+          "note": "ADR YoY +3.0%  |  Current $405/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 60.0,
+          "weight": 0.12,
+          "weighted": 7.2,
+          "note": "Home price YoY +6.0%  |  Median $1,050,000"
+        },
+        {
+          "name": "revpan",
+          "score": 67.5,
+          "weight": 0.1,
+          "weighted": 6.75,
+          "note": "RevPAN $242/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 68.0,
+          "weight": 0.08,
+          "weighted": 5.44,
+          "note": "Peak premium +22.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 84.0,
+          "weight": 0.08,
+          "weighted": 6.72,
+          "note": "+4.0% new supply  |  1,400 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 78.0,
+          "weight": 0.07,
+          "weighted": 5.46,
+          "note": "CHS  32 min  (within preference)"
+        },
+        {
+          "name": "beach",
+          "score": 100.0,
+          "weight": 0.05,
+          "weighted": 5.0,
+          "note": "Oceanfront"
+        },
+        {
+          "name": "golf",
+          "score": 60.0,
+          "weight": 0.05,
+          "weighted": 3.0,
+          "note": "18 courses within 30 mi"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "market_id": "nc_crystal_coast_carteret",
+      "name": "Crystal Coast (Carteret County)",
+      "state": "NC",
+      "category": "coastal_nc",
+      "composite_score": 68.3,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.65,
+      "peak_occupancy_rate": 0.87,
+      "median_adr_3bd": 350.0,
+      "adr_yoy_growth": 0.05,
+      "annual_revpan": 197.0,
+      "active_listings": 3200,
+      "listings_yoy_growth": 0.08,
+      "median_home_price": 620000,
+      "home_price_yoy_appreciation": 0.06,
+      "nearest_airport_code": "EWN",
+      "nearest_airport_drive_min": 35,
+      "beach_access_tier": 1,
+      "golf_courses_30mi": 7,
+      "regulatory_status": "stable",
+      "regulatory_notes": "Carteret County has light registration requirements. No STR restrictions in unincorporated areas.",
+      "regulatory_alert": false,
+      "viable_for_cash_purchase": true,
+      "viable_for_financed_purchase": false,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 92.0,
+          "weight": 0.18,
+          "weighted": 16.56,
+          "note": "Carteret County has light registration requirements. No STR restrictions in unin"
+        },
+        {
+          "name": "occupancy",
+          "score": 62.5,
+          "weight": 0.15,
+          "weighted": 9.38,
+          "note": "Annual 65.0%  |  Peak 87.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 65.0,
+          "weight": 0.12,
+          "weighted": 7.8,
+          "note": "ADR YoY +5.0%  |  Current $350/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 60.0,
+          "weight": 0.12,
+          "weighted": 7.2,
+          "note": "Home price YoY +6.0%  |  Median $620,000"
+        },
+        {
+          "name": "revpan",
+          "score": 48.8,
+          "weight": 0.1,
+          "weighted": 4.88,
+          "note": "RevPAN $197/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 68.0,
+          "weight": 0.08,
+          "weighted": 5.44,
+          "note": "Peak premium +22.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 68.0,
+          "weight": 0.08,
+          "weighted": 5.44,
+          "note": "+8.0% new supply  |  3,200 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 78.0,
+          "weight": 0.07,
+          "weighted": 5.46,
+          "note": "EWN  35 min  (within preference)"
+        },
+        {
+          "name": "beach",
+          "score": 100.0,
+          "weight": 0.05,
+          "weighted": 5.0,
+          "note": "Oceanfront"
+        },
+        {
+          "name": "golf",
+          "score": 23.3,
+          "weight": 0.05,
+          "weighted": 1.17,
+          "note": "7 courses within 30 mi"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "market_id": "nc_obx_dare",
+      "name": "Outer Banks (Dare County)",
+      "state": "NC",
+      "category": "coastal_nc",
+      "composite_score": 67.7,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.68,
+      "peak_occupancy_rate": 0.91,
+      "median_adr_3bd": 415.0,
+      "adr_yoy_growth": 0.04,
+      "annual_revpan": 243.0,
+      "active_listings": 5800,
+      "listings_yoy_growth": 0.06,
+      "median_home_price": 725000,
+      "home_price_yoy_appreciation": 0.05,
+      "nearest_airport_code": "ORF",
+      "nearest_airport_drive_min": 75,
+      "beach_access_tier": 1,
+      "golf_courses_30mi": 4,
+      "regulatory_status": "stable",
+      "regulatory_notes": "Dare County requires STR permit ($50/yr). No density caps or ban proposals as of Q1 2025.",
+      "regulatory_alert": false,
+      "viable_for_cash_purchase": true,
+      "viable_for_financed_purchase": true,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 92.0,
+          "weight": 0.18,
+          "weighted": 16.56,
+          "note": "Dare County requires STR permit ($50/yr). No density caps or ban proposals as of"
+        },
+        {
+          "name": "occupancy",
+          "score": 70.0,
+          "weight": 0.15,
+          "weighted": 10.5,
+          "note": "Annual 68.0%  |  Peak 91.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 60.0,
+          "weight": 0.12,
+          "weighted": 7.2,
+          "note": "ADR YoY +4.0%  |  Current $415/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 50.0,
+          "weight": 0.12,
+          "weighted": 6.0,
+          "note": "Home price YoY +5.0%  |  Median $725,000"
+        },
+        {
+          "name": "revpan",
+          "score": 67.9,
+          "weight": 0.1,
+          "weighted": 6.79,
+          "note": "RevPAN $243/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 72.0,
+          "weight": 0.08,
+          "weighted": 5.76,
+          "note": "Peak premium +23.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 76.0,
+          "weight": 0.08,
+          "weighted": 6.08,
+          "note": "+6.0% new supply  |  5,800 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 45.0,
+          "weight": 0.07,
+          "weighted": 3.15,
+          "note": "ORF  75 min  (EXCEEDS 60-min preference)"
+        },
+        {
+          "name": "beach",
+          "score": 100.0,
+          "weight": 0.05,
+          "weighted": 5.0,
+          "note": "Oceanfront"
+        },
+        {
+          "name": "golf",
+          "score": 13.3,
+          "weight": 0.05,
+          "weighted": 0.67,
+          "note": "4 courses within 30 mi"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "market_id": "nc_topsail_pender",
+      "name": "Topsail Island (Pender / Onslow)",
+      "state": "NC",
+      "category": "coastal_nc",
+      "composite_score": 65.7,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.62,
+      "peak_occupancy_rate": 0.86,
+      "median_adr_3bd": 305.0,
+      "adr_yoy_growth": 0.06,
+      "annual_revpan": 167.0,
+      "active_listings": 1800,
+      "listings_yoy_growth": 0.1,
+      "median_home_price": 545000,
+      "home_price_yoy_appreciation": 0.05,
+      "nearest_airport_code": "ILM",
+      "nearest_airport_drive_min": 45,
+      "beach_access_tier": 1,
+      "golf_courses_30mi": 9,
+      "regulatory_status": "stable",
+      "regulatory_notes": "Surf City and Holly Ridge have minimal STR regulation. Growing market with no active restriction proposals.",
+      "regulatory_alert": false,
+      "viable_for_cash_purchase": true,
+      "viable_for_financed_purchase": false,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 92.0,
+          "weight": 0.18,
+          "weighted": 16.56,
+          "note": "Surf City and Holly Ridge have minimal STR regulation. Growing market with no ac"
+        },
+        {
+          "name": "occupancy",
+          "score": 55.0,
+          "weight": 0.15,
+          "weighted": 8.25,
+          "note": "Annual 62.0%  |  Peak 86.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 70.0,
+          "weight": 0.12,
+          "weighted": 8.4,
+          "note": "ADR YoY +6.0%  |  Current $305/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 50.0,
+          "weight": 0.12,
+          "weighted": 6.0,
+          "note": "Home price YoY +5.0%  |  Median $545,000"
+        },
+        {
+          "name": "revpan",
+          "score": 36.2,
+          "weight": 0.1,
+          "weighted": 3.62,
+          "note": "RevPAN $167/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 76.0,
+          "weight": 0.08,
+          "weighted": 6.08,
+          "note": "Peak premium +24.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 60.0,
+          "weight": 0.08,
+          "weighted": 4.8,
+          "note": "+10.0% new supply  |  1,800 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 78.0,
+          "weight": 0.07,
+          "weighted": 5.46,
+          "note": "ILM  45 min  (within preference)"
+        },
+        {
+          "name": "beach",
+          "score": 100.0,
+          "weight": 0.05,
+          "weighted": 5.0,
+          "note": "Oceanfront"
+        },
+        {
+          "name": "golf",
+          "score": 30.0,
+          "weight": 0.05,
+          "weighted": 1.5,
+          "note": "9 courses within 30 mi"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "market_id": "sc_kiawah_charleston",
+      "name": "Kiawah / Seabrook Islands",
+      "state": "SC",
+      "category": "coastal_sc",
+      "composite_score": 62.2,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.7,
+      "peak_occupancy_rate": 0.91,
+      "median_adr_3bd": 520.0,
+      "adr_yoy_growth": 0.04,
+      "annual_revpan": 306.0,
+      "active_listings": 900,
+      "listings_yoy_growth": 0.03,
+      "median_home_price": 1150000,
+      "home_price_yoy_appreciation": 0.07,
+      "nearest_airport_code": "CHS",
+      "nearest_airport_drive_min": 45,
+      "beach_access_tier": 1,
+      "golf_courses_30mi": 20,
+      "regulatory_status": "restrictive",
+      "regulatory_notes": "Kiawah/Seabrook POAs enforce STR through resort programs only. Airbnb/VRBO listings in most zones violate POA rules. AVOID unless property is in resort rental program.",
+      "regulatory_alert": true,
+      "viable_for_cash_purchase": false,
+      "viable_for_financed_purchase": false,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 0.0,
+          "weight": 0.18,
+          "weighted": 0.0,
+          "note": "Kiawah/Seabrook POAs enforce STR through resort programs only. Airbnb/VRBO listi"
+        },
+        {
+          "name": "occupancy",
+          "score": 75.0,
+          "weight": 0.15,
+          "weighted": 11.25,
+          "note": "Annual 70.0%  |  Peak 91.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 60.0,
+          "weight": 0.12,
+          "weighted": 7.2,
+          "note": "ADR YoY +4.0%  |  Current $520/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 70.0,
+          "weight": 0.12,
+          "weighted": 8.4,
+          "note": "Home price YoY +7.0%  |  Median $1,150,000"
+        },
+        {
+          "name": "revpan",
+          "score": 94.2,
+          "weight": 0.1,
+          "weighted": 9.42,
+          "note": "RevPAN $306/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 64.0,
+          "weight": 0.08,
+          "weighted": 5.12,
+          "note": "Peak premium +21.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 88.0,
+          "weight": 0.08,
+          "weighted": 7.04,
+          "note": "+3.0% new supply  |  900 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 78.0,
+          "weight": 0.07,
+          "weighted": 5.46,
+          "note": "CHS  45 min  (within preference)"
+        },
+        {
+          "name": "beach",
+          "score": 100.0,
+          "weight": 0.05,
+          "weighted": 5.0,
+          "note": "Oceanfront"
+        },
+        {
+          "name": "golf",
+          "score": 66.7,
+          "weight": 0.05,
+          "weighted": 3.33,
+          "note": "20 courses within 30 mi"
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "market_id": "sc_myrtle_beach_horry",
+      "name": "Myrtle Beach (Grand Strand)",
+      "state": "SC",
+      "category": "coastal_sc",
+      "composite_score": 61.0,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.64,
+      "peak_occupancy_rate": 0.88,
+      "median_adr_3bd": 230.0,
+      "adr_yoy_growth": 0.02,
+      "annual_revpan": 130.0,
+      "active_listings": 14500,
+      "listings_yoy_growth": 0.09,
+      "median_home_price": 410000,
+      "home_price_yoy_appreciation": 0.03,
+      "nearest_airport_code": "MYR",
+      "nearest_airport_drive_min": 10,
+      "beach_access_tier": 1,
+      "golf_courses_30mi": 35,
+      "regulatory_status": "evolving_benign",
+      "regulatory_notes": "Horry County STR-friendly. City of Myrtle Beach has permit system. No ban proposals. High supply is primary risk.",
+      "regulatory_alert": false,
+      "viable_for_cash_purchase": true,
+      "viable_for_financed_purchase": false,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 68.0,
+          "weight": 0.18,
+          "weighted": 12.24,
+          "note": "Horry County STR-friendly. City of Myrtle Beach has permit system. No ban propos"
+        },
+        {
+          "name": "occupancy",
+          "score": 60.0,
+          "weight": 0.15,
+          "weighted": 9.0,
+          "note": "Annual 64.0%  |  Peak 88.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 50.0,
+          "weight": 0.12,
+          "weighted": 6.0,
+          "note": "ADR YoY +2.0%  |  Current $230/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 30.0,
+          "weight": 0.12,
+          "weighted": 3.6,
+          "note": "Home price YoY +3.0%  |  Median $410,000"
+        },
+        {
+          "name": "revpan",
+          "score": 20.8,
+          "weight": 0.1,
+          "weighted": 2.08,
+          "note": "RevPAN $130/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 76.0,
+          "weight": 0.08,
+          "weighted": 6.08,
+          "note": "Peak premium +24.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 64.0,
+          "weight": 0.08,
+          "weighted": 5.12,
+          "note": "+9.0% new supply  |  14,500 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 98.0,
+          "weight": 0.07,
+          "weighted": 6.86,
+          "note": "MYR  10 min  (within preference)"
+        },
+        {
+          "name": "beach",
+          "score": 100.0,
+          "weight": 0.05,
+          "weighted": 5.0,
+          "note": "Oceanfront"
+        },
+        {
+          "name": "golf",
+          "score": 100.0,
+          "weight": 0.05,
+          "weighted": 5.0,
+          "note": "35 courses within 30 mi"
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "market_id": "nc_wilmington_nhc",
+      "name": "Wilmington / Wrightsville Beach",
+      "state": "NC",
+      "category": "coastal_nc",
+      "composite_score": 59.3,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.66,
+      "peak_occupancy_rate": 0.84,
+      "median_adr_3bd": 295.0,
+      "adr_yoy_growth": 0.03,
+      "annual_revpan": 178.0,
+      "active_listings": 4100,
+      "listings_yoy_growth": 0.11,
+      "median_home_price": 585000,
+      "home_price_yoy_appreciation": 0.04,
+      "nearest_airport_code": "ILM",
+      "nearest_airport_drive_min": 12,
+      "beach_access_tier": 2,
+      "golf_courses_30mi": 14,
+      "regulatory_status": "evolving_benign",
+      "regulatory_notes": "City of Wilmington requires annual STR license. Wrightsville Beach limits new permits. County areas permissive.",
+      "regulatory_alert": false,
+      "viable_for_cash_purchase": true,
+      "viable_for_financed_purchase": false,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 68.0,
+          "weight": 0.18,
+          "weighted": 12.24,
+          "note": "City of Wilmington requires annual STR license. Wrightsville Beach limits new pe"
+        },
+        {
+          "name": "occupancy",
+          "score": 65.0,
+          "weight": 0.15,
+          "weighted": 9.75,
+          "note": "Annual 66.0%  |  Peak 84.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 55.0,
+          "weight": 0.12,
+          "weighted": 6.6,
+          "note": "ADR YoY +3.0%  |  Current $295/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 40.0,
+          "weight": 0.12,
+          "weighted": 4.8,
+          "note": "Home price YoY +4.0%  |  Median $585,000"
+        },
+        {
+          "name": "revpan",
+          "score": 40.8,
+          "weight": 0.1,
+          "weighted": 4.08,
+          "note": "RevPAN $178/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 52.0,
+          "weight": 0.08,
+          "weighted": 4.16,
+          "note": "Peak premium +18.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 56.0,
+          "weight": 0.08,
+          "weighted": 4.48,
+          "note": "+11.0% new supply  |  4,100 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 98.0,
+          "weight": 0.07,
+          "weighted": 6.86,
+          "note": "ILM  12 min  (within preference)"
+        },
+        {
+          "name": "beach",
+          "score": 80.0,
+          "weight": 0.05,
+          "weighted": 4.0,
+          "note": "Coastal <5mi"
+        },
+        {
+          "name": "golf",
+          "score": 46.7,
+          "weight": 0.05,
+          "weighted": 2.33,
+          "note": "14 courses within 30 mi"
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "market_id": "nc_boone_watauga",
+      "name": "Boone / Banner Elk / Blowing Rock",
+      "state": "NC",
+      "category": "mountain_nc",
+      "composite_score": 54.1,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.6,
+      "peak_occupancy_rate": 0.8,
+      "median_adr_3bd": 280.0,
+      "adr_yoy_growth": 0.04,
+      "annual_revpan": 148.0,
+      "active_listings": 1900,
+      "listings_yoy_growth": 0.09,
+      "median_home_price": 495000,
+      "home_price_yoy_appreciation": 0.04,
+      "nearest_airport_code": "TRI",
+      "nearest_airport_drive_min": 75,
+      "beach_access_tier": 5,
+      "golf_courses_30mi": 7,
+      "regulatory_status": "stable",
+      "regulatory_notes": "Watauga and Avery Counties are STR-permissive. Boone town limits have registration requirement but no ban proposals. Ashe County unregulated.",
+      "regulatory_alert": false,
+      "viable_for_cash_purchase": true,
+      "viable_for_financed_purchase": false,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 92.0,
+          "weight": 0.18,
+          "weighted": 16.56,
+          "note": "Watauga and Avery Counties are STR-permissive. Boone town limits have registrati"
+        },
+        {
+          "name": "occupancy",
+          "score": 50.0,
+          "weight": 0.15,
+          "weighted": 7.5,
+          "note": "Annual 60.0%  |  Peak 80.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 60.0,
+          "weight": 0.12,
+          "weighted": 7.2,
+          "note": "ADR YoY +4.0%  |  Current $280/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 40.0,
+          "weight": 0.12,
+          "weighted": 4.8,
+          "note": "Home price YoY +4.0%  |  Median $495,000"
+        },
+        {
+          "name": "revpan",
+          "score": 28.3,
+          "weight": 0.1,
+          "weighted": 2.83,
+          "note": "RevPAN $148/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 60.0,
+          "weight": 0.08,
+          "weighted": 4.8,
+          "note": "Peak premium +20.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 64.0,
+          "weight": 0.08,
+          "weighted": 5.12,
+          "note": "+9.0% new supply  |  1,900 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 45.0,
+          "weight": 0.07,
+          "weighted": 3.15,
+          "note": "TRI  75 min  (EXCEEDS 60-min preference)"
+        },
+        {
+          "name": "beach",
+          "score": 20.0,
+          "weight": 0.05,
+          "weighted": 1.0,
+          "note": "Mountain"
+        },
+        {
+          "name": "golf",
+          "score": 23.3,
+          "weight": 0.05,
+          "weighted": 1.17,
+          "note": "7 courses within 30 mi"
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "market_id": "nc_lake_norman_meck",
+      "name": "Lake Norman",
+      "state": "NC",
+      "category": "lake_nc",
+      "composite_score": 50.4,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.57,
+      "peak_occupancy_rate": 0.78,
+      "median_adr_3bd": 240.0,
+      "adr_yoy_growth": 0.04,
+      "annual_revpan": 121.0,
+      "active_listings": 1600,
+      "listings_yoy_growth": 0.12,
+      "median_home_price": 650000,
+      "home_price_yoy_appreciation": 0.04,
+      "nearest_airport_code": "CLT",
+      "nearest_airport_drive_min": 30,
+      "beach_access_tier": 4,
+      "golf_courses_30mi": 16,
+      "regulatory_status": "evolving_benign",
+      "regulatory_notes": "Cornelius and Davidson have STR permit requirements. County areas unregulated. No ban proposals active.",
+      "regulatory_alert": false,
+      "viable_for_cash_purchase": true,
+      "viable_for_financed_purchase": false,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 56.0,
+          "weight": 0.18,
+          "weighted": 10.08,
+          "note": "Cornelius and Davidson have STR permit requirements. County areas unregulated. N"
+        },
+        {
+          "name": "occupancy",
+          "score": 42.5,
+          "weight": 0.15,
+          "weighted": 6.37,
+          "note": "Annual 57.0%  |  Peak 78.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 60.0,
+          "weight": 0.12,
+          "weighted": 7.2,
+          "note": "ADR YoY +4.0%  |  Current $240/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 40.0,
+          "weight": 0.12,
+          "weighted": 4.8,
+          "note": "Home price YoY +4.0%  |  Median $650,000"
+        },
+        {
+          "name": "revpan",
+          "score": 17.1,
+          "weight": 0.1,
+          "weighted": 1.71,
+          "note": "RevPAN $121/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 64.0,
+          "weight": 0.08,
+          "weighted": 5.12,
+          "note": "Peak premium +21.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 52.0,
+          "weight": 0.08,
+          "weighted": 4.16,
+          "note": "+12.0% new supply  |  1,600 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 90.0,
+          "weight": 0.07,
+          "weighted": 6.3,
+          "note": "CLT  30 min  (within preference)"
+        },
+        {
+          "name": "beach",
+          "score": 40.0,
+          "weight": 0.05,
+          "weighted": 2.0,
+          "note": "Lake/river"
+        },
+        {
+          "name": "golf",
+          "score": 53.3,
+          "weight": 0.05,
+          "weighted": 2.67,
+          "note": "16 courses within 30 mi"
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "market_id": "nc_asheville_buncombe",
+      "name": "Asheville",
+      "state": "NC",
+      "category": "mountain_nc",
+      "composite_score": 47.8,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.66,
+      "peak_occupancy_rate": 0.82,
+      "median_adr_3bd": 265.0,
+      "adr_yoy_growth": 0.01,
+      "annual_revpan": 153.0,
+      "active_listings": 2800,
+      "listings_yoy_growth": -0.08,
+      "median_home_price": 520000,
+      "home_price_yoy_appreciation": 0.02,
+      "nearest_airport_code": "AVL",
+      "nearest_airport_drive_min": 15,
+      "beach_access_tier": 5,
+      "golf_courses_30mi": 9,
+      "regulatory_status": "evolving_risky",
+      "regulatory_notes": "ALERT: Asheville requires owner-occupancy for STR permits in residential zones (enacted 2022, expanded 2024). Non-owner STR inside city = regulatory violation. Rural Buncombe County remains permissive.",
+      "regulatory_alert": true,
+      "viable_for_cash_purchase": true,
+      "viable_for_financed_purchase": false,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 35.0,
+          "weight": 0.18,
+          "weighted": 6.3,
+          "note": "ALERT: Asheville requires owner-occupancy for STR permits in residential zones ("
+        },
+        {
+          "name": "occupancy",
+          "score": 65.0,
+          "weight": 0.15,
+          "weighted": 9.75,
+          "note": "Annual 66.0%  |  Peak 82.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 45.0,
+          "weight": 0.12,
+          "weighted": 5.4,
+          "note": "ADR YoY +1.0%  |  Current $265/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 20.0,
+          "weight": 0.12,
+          "weighted": 2.4,
+          "note": "Home price YoY +2.0%  |  Median $520,000"
+        },
+        {
+          "name": "revpan",
+          "score": 30.4,
+          "weight": 0.1,
+          "weighted": 3.04,
+          "note": "RevPAN $153/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 44.0,
+          "weight": 0.08,
+          "weighted": 3.52,
+          "note": "Peak premium +16.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 100.0,
+          "weight": 0.08,
+          "weighted": 8.0,
+          "note": "supply contracting  |  2,800 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 98.0,
+          "weight": 0.07,
+          "weighted": 6.86,
+          "note": "AVL  15 min  (within preference)"
+        },
+        {
+          "name": "beach",
+          "score": 20.0,
+          "weight": 0.05,
+          "weighted": 1.0,
+          "note": "Mountain"
+        },
+        {
+          "name": "golf",
+          "score": 30.0,
+          "weight": 0.05,
+          "weighted": 1.5,
+          "note": "9 courses within 30 mi"
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "market_id": "nc_lake_lure_rutherford",
+      "name": "Lake Lure / Chimney Rock",
+      "state": "NC",
+      "category": "lake_nc",
+      "composite_score": 44.6,
+      "prior_composite": null,
+      "delta": null,
+      "annual_occupancy_rate": 0.55,
+      "peak_occupancy_rate": 0.76,
+      "median_adr_3bd": 255.0,
+      "adr_yoy_growth": 0.03,
+      "annual_revpan": 122.0,
+      "active_listings": 620,
+      "listings_yoy_growth": 0.14,
+      "median_home_price": 430000,
+      "home_price_yoy_appreciation": 0.02,
+      "nearest_airport_code": "AVL",
+      "nearest_airport_drive_min": 48,
+      "beach_access_tier": 4,
+      "golf_courses_30mi": 5,
+      "regulatory_status": "evolving_benign",
+      "regulatory_notes": "Town of Lake Lure STR-permissive. NOTE: Hurricane Helene (Sep 2024) caused major damage; market in recovery. Evaluate individual property flood/wind risk carefully.",
+      "regulatory_alert": false,
+      "viable_for_cash_purchase": true,
+      "viable_for_financed_purchase": false,
+      "factors": [
+        {
+          "name": "regulatory",
+          "score": 68.0,
+          "weight": 0.18,
+          "weighted": 12.24,
+          "note": "Town of Lake Lure STR-permissive. NOTE: Hurricane Helene (Sep 2024) caused major"
+        },
+        {
+          "name": "occupancy",
+          "score": 37.5,
+          "weight": 0.15,
+          "weighted": 5.63,
+          "note": "Annual 55.0%  |  Peak 76.0%"
+        },
+        {
+          "name": "adr_trend",
+          "score": 55.0,
+          "weight": 0.12,
+          "weighted": 6.6,
+          "note": "ADR YoY +3.0%  |  Current $255/night"
+        },
+        {
+          "name": "appreciation",
+          "score": 20.0,
+          "weight": 0.12,
+          "weighted": 2.4,
+          "note": "Home price YoY +2.0%  |  Median $430,000"
+        },
+        {
+          "name": "revpan",
+          "score": 17.5,
+          "weight": 0.1,
+          "weighted": 1.75,
+          "note": "RevPAN $122/night"
+        },
+        {
+          "name": "seasonality",
+          "score": 64.0,
+          "weight": 0.08,
+          "weighted": 5.12,
+          "note": "Peak premium +21.0pp over annual avg"
+        },
+        {
+          "name": "supply_growth",
+          "score": 44.0,
+          "weight": 0.08,
+          "weighted": 3.52,
+          "note": "+14.0% new supply  |  620 active listings"
+        },
+        {
+          "name": "airport",
+          "score": 65.0,
+          "weight": 0.07,
+          "weighted": 4.55,
+          "note": "AVL  48 min  (within preference)"
+        },
+        {
+          "name": "beach",
+          "score": 40.0,
+          "weight": 0.05,
+          "weighted": 2.0,
+          "note": "Lake/river"
+        },
+        {
+          "name": "golf",
+          "score": 16.7,
+          "weight": 0.05,
+          "weighted": 0.83,
+          "note": "5 courses within 30 mi"
+        }
+      ]
+    }
+  ],
+  "properties": {
+    "passed": [
+      {
+        "rank": 1,
+        "listing_id": "seed_hhh_01",
+        "address": "22 Turtle Cove Ln",
+        "city": "Hilton Head Island",
+        "state": "SC",
+        "zip_code": "29928",
+        "market_id": "sc_hilton_head_beaufort",
+        "price": 789000,
+        "bedrooms": 3,
+        "bathrooms": 3.0,
+        "sqft": 1940,
+        "year_built": 2017,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": true,
+        "beach_distance_miles": 0.6,
+        "flood_zone": "X",
+        "airport_code": "HHH",
+        "airport_drive_min": 12,
+        "days_on_market": 38,
+        "original_list_price": 825000,
+        "price_reduction": 36000,
+        "composite_score": 81.3,
+        "recommendation": "Strong Buy Candidate",
+        "estimated_egi_annual": 73641.11698944,
+        "estimated_monthly_cf_cash": 1833.7180824533327,
+        "estimated_monthly_cf_dscr": -2123.026749769279,
+        "estimated_irr_cash_5yr": 0.06440407822640373,
+        "url": "https://example.com/seed_hhh_01",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 100.0,
+            "weight": 0.25,
+            "weighted": 25.0,
+            "note": "Cash CF: +$1,834/mo  (strongly positive)  |  DSCR CF: $-2,123/mo"
+          },
+          {
+            "name": "market",
+            "score": 71.0,
+            "weight": 0.2,
+            "weighted": 14.2,
+            "note": "Region score: 71.0/100"
+          },
+          {
+            "name": "location",
+            "score": 98.2,
+            "weight": 0.2,
+            "weighted": 19.64,
+            "note": "0.6mi to beach  |  HHH 12min  |  flood zone X"
+          },
+          {
+            "name": "value",
+            "score": 41.0,
+            "weight": 0.2,
+            "weighted": 8.19,
+            "note": "$789,000 vs $820,000 median (96%)  |  DOM 38  |  reduced 4.4% ($36,000)"
+          },
+          {
+            "name": "risk",
+            "score": 95.0,
+            "weight": 0.15,
+            "weighted": 14.25,
+            "note": "Market reg: evolving (benign)"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "listing_id": "seed_obx_01",
+        "address": "1102 S Virginia Dare Tr",
+        "city": "Kill Devil Hills",
+        "state": "NC",
+        "zip_code": "27948",
+        "market_id": "nc_obx_dare",
+        "price": 719000,
+        "bedrooms": 3,
+        "bathrooms": 3.0,
+        "sqft": 1780,
+        "year_built": 2016,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": false,
+        "beach_distance_miles": 0.3,
+        "flood_zone": "X",
+        "airport_code": "ORF",
+        "airport_drive_min": 75,
+        "days_on_market": 31,
+        "original_list_price": 740000,
+        "price_reduction": 21000,
+        "composite_score": 76.0,
+        "recommendation": "Monitor Closely",
+        "estimated_egi_annual": 65636.0388255,
+        "estimated_monthly_cf_cash": 1301.3365687916667,
+        "estimated_monthly_cf_dscr": -2304.3662631070124,
+        "estimated_irr_cash_5yr": 0.058515560637227196,
+        "url": "https://example.com/seed_obx_01",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 100.0,
+            "weight": 0.25,
+            "weighted": 25.0,
+            "note": "Cash CF: +$1,301/mo  (strongly positive)  |  DSCR CF: $-2,304/mo"
+          },
+          {
+            "name": "market",
+            "score": 67.7,
+            "weight": 0.2,
+            "weighted": 13.54,
+            "note": "Region score: 67.7/100"
+          },
+          {
+            "name": "location",
+            "score": 77.0,
+            "weight": 0.2,
+            "weighted": 15.4,
+            "note": "0.3mi to beach  |  ORF 75min  |  flood zone X"
+          },
+          {
+            "name": "value",
+            "score": 35.4,
+            "weight": 0.2,
+            "weighted": 7.08,
+            "note": "$719,000 vs $725,000 median (99%)  |  DOM 31  |  reduced 2.8% ($21,000)"
+          },
+          {
+            "name": "risk",
+            "score": 100.0,
+            "weight": 0.15,
+            "weighted": 15.0,
+            "note": "No major risk flags"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "listing_id": "seed_iop_01",
+        "address": "18 Ocean Blvd",
+        "city": "Isle of Palms",
+        "state": "SC",
+        "zip_code": "29451",
+        "market_id": "sc_isle_of_palms_charleston",
+        "price": 1095000,
+        "bedrooms": 3,
+        "bathrooms": 3.0,
+        "sqft": 2050,
+        "year_built": 2019,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": false,
+        "beach_distance_miles": 0.1,
+        "flood_zone": "AE",
+        "airport_code": "CHS",
+        "airport_drive_min": 32,
+        "days_on_market": 44,
+        "original_list_price": 1150000,
+        "price_reduction": 55000,
+        "composite_score": 75.7,
+        "recommendation": "Monitor Closely",
+        "estimated_egi_annual": 74499.597315,
+        "estimated_monthly_cf_cash": 753.5081095833339,
+        "estimated_monthly_cf_dscr": -4737.791752626755,
+        "estimated_irr_cash_5yr": 0.05363731268812116,
+        "url": "https://example.com/seed_iop_01",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 100.0,
+            "weight": 0.25,
+            "weighted": 25.0,
+            "note": "Cash CF: +$754/mo  (strongly positive)  |  DSCR CF: $-4,738/mo"
+          },
+          {
+            "name": "market",
+            "score": 68.9,
+            "weight": 0.2,
+            "weighted": 13.78,
+            "note": "Region score: 68.9/100"
+          },
+          {
+            "name": "location",
+            "score": 83.2,
+            "weight": 0.2,
+            "weighted": 16.64,
+            "note": "0.1mi to beach  |  CHS 32min  |  flood zone AE"
+          },
+          {
+            "name": "value",
+            "score": 37.6,
+            "weight": 0.2,
+            "weighted": 7.53,
+            "note": "$1,095,000 vs $1,050,000 median (104%)  |  DOM 44  |  reduced 4.8% ($55,000)"
+          },
+          {
+            "name": "risk",
+            "score": 85.0,
+            "weight": 0.15,
+            "weighted": 12.75,
+            "note": "Flood zone AE/A (moderate)  |  Market reg: evolving (benign)"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "listing_id": "seed_cc_01",
+        "address": "214 Ocean Drive",
+        "city": "Emerald Isle",
+        "state": "NC",
+        "zip_code": "28594",
+        "market_id": "nc_crystal_coast_carteret",
+        "price": 699000,
+        "bedrooms": 3,
+        "bathrooms": 3.0,
+        "sqft": 1820,
+        "year_built": 2018,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": true,
+        "beach_distance_miles": 0.1,
+        "flood_zone": "AE",
+        "airport_code": "EWN",
+        "airport_drive_min": 35,
+        "days_on_market": 42,
+        "original_list_price": 725000,
+        "price_reduction": 26000,
+        "composite_score": 74.8,
+        "recommendation": "Monitor Closely",
+        "estimated_egi_annual": 69204.1253904,
+        "estimated_monthly_cf_cash": 1495.3437825333338,
+        "estimated_monthly_cf_dscr": -2010.061334987079,
+        "estimated_irr_cash_5yr": 0.07201926263767036,
+        "url": "https://example.com/seed_cc_01",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 100.0,
+            "weight": 0.25,
+            "weighted": 25.0,
+            "note": "Cash CF: +$1,495/mo  (strongly positive)  |  DSCR CF: $-2,010/mo"
+          },
+          {
+            "name": "market",
+            "score": 68.3,
+            "weight": 0.2,
+            "weighted": 13.66,
+            "note": "Region score: 68.3/100"
+          },
+          {
+            "name": "location",
+            "score": 83.2,
+            "weight": 0.2,
+            "weighted": 16.64,
+            "note": "0.1mi to beach  |  EWN 35min  |  flood zone AE"
+          },
+          {
+            "name": "value",
+            "score": 30.0,
+            "weight": 0.2,
+            "weighted": 6.0,
+            "note": "$699,000 vs $620,000 median (113%)  |  DOM 42  |  reduced 3.6% ($26,000)"
+          },
+          {
+            "name": "risk",
+            "score": 90.0,
+            "weight": 0.15,
+            "weighted": 13.5,
+            "note": "Flood zone AE/A (moderate)"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "listing_id": "seed_hhh_03",
+        "address": "7 Folly Field Rd",
+        "city": "Hilton Head Island",
+        "state": "SC",
+        "zip_code": "29928",
+        "market_id": "sc_hilton_head_beaufort",
+        "price": 1050000,
+        "bedrooms": 4,
+        "bathrooms": 4.0,
+        "sqft": 2680,
+        "year_built": 2021,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": true,
+        "beach_distance_miles": 0.2,
+        "flood_zone": "AE",
+        "airport_code": "HHH",
+        "airport_drive_min": 10,
+        "days_on_market": 22,
+        "original_list_price": 1075000,
+        "price_reduction": 25000,
+        "composite_score": 73.2,
+        "recommendation": "Monitor Closely",
+        "estimated_egi_annual": 103237.8325794816,
+        "estimated_monthly_cf_cash": 3992.7360482901336,
+        "estimated_monthly_cf_dscr": -1272.893956568855,
+        "estimated_irr_cash_5yr": 0.08127728618802674,
+        "url": "https://example.com/seed_hhh_03",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 100.0,
+            "weight": 0.25,
+            "weighted": 25.0,
+            "note": "Cash CF: +$3,993/mo  (strongly positive)  |  DSCR CF: $-1,273/mo"
+          },
+          {
+            "name": "market",
+            "score": 71.0,
+            "weight": 0.2,
+            "weighted": 14.2,
+            "note": "Region score: 71.0/100"
+          },
+          {
+            "name": "location",
+            "score": 91.2,
+            "weight": 0.2,
+            "weighted": 18.24,
+            "note": "0.2mi to beach  |  HHH 10min  |  flood zone AE"
+          },
+          {
+            "name": "value",
+            "score": 15.0,
+            "weight": 0.2,
+            "weighted": 3.0,
+            "note": "$1,050,000 vs $820,000 median (128%)  |  DOM 22  |  reduced 2.3% ($25,000)"
+          },
+          {
+            "name": "risk",
+            "score": 85.0,
+            "weight": 0.15,
+            "weighted": 12.75,
+            "note": "Flood zone AE/A (moderate)  |  Market reg: evolving (benign)"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "listing_id": "seed_pi_02",
+        "address": "81 Creek Bend Ct",
+        "city": "Litchfield Beach",
+        "state": "SC",
+        "zip_code": "29585",
+        "market_id": "sc_pawleys_georgetown",
+        "price": 725000,
+        "bedrooms": 4,
+        "bathrooms": 3.0,
+        "sqft": 2100,
+        "year_built": 2018,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": true,
+        "beach_distance_miles": 1.4,
+        "flood_zone": "X",
+        "airport_code": "MYR",
+        "airport_drive_min": 30,
+        "days_on_market": 14,
+        "original_list_price": 725000,
+        "price_reduction": 0,
+        "composite_score": 73.1,
+        "recommendation": "Monitor Closely",
+        "estimated_egi_annual": 56117.23493376001,
+        "estimated_monthly_cf_cash": 578.7279111466675,
+        "estimated_monthly_cf_dscr": -3057.0642350654907,
+        "estimated_irr_cash_5yr": 0.046109427578295815,
+        "url": "https://example.com/seed_pi_02",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 100.0,
+            "weight": 0.25,
+            "weighted": 25.0,
+            "note": "Cash CF: +$579/mo  (strongly positive)  |  DSCR CF: $-3,057/mo"
+          },
+          {
+            "name": "market",
+            "score": 69.0,
+            "weight": 0.2,
+            "weighted": 13.8,
+            "note": "Region score: 69.0/100"
+          },
+          {
+            "name": "location",
+            "score": 87.8,
+            "weight": 0.2,
+            "weighted": 17.56,
+            "note": "1.4mi to beach  |  MYR 30min  |  flood zone X"
+          },
+          {
+            "name": "value",
+            "score": 8.9,
+            "weight": 0.2,
+            "weighted": 1.78,
+            "note": "$725,000 vs $560,000 median (129%)  |  DOM 14  |  reduced 0.0% ($0)"
+          },
+          {
+            "name": "risk",
+            "score": 100.0,
+            "weight": 0.15,
+            "weighted": 15.0,
+            "note": "No major risk flags"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "listing_id": "seed_cc_03",
+        "address": "512 Salter Path Rd",
+        "city": "Pine Knoll Shores",
+        "state": "NC",
+        "zip_code": "28512",
+        "market_id": "nc_crystal_coast_carteret",
+        "price": 875000,
+        "bedrooms": 4,
+        "bathrooms": 3.5,
+        "sqft": 2340,
+        "year_built": 2019,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": true,
+        "beach_distance_miles": 0.4,
+        "flood_zone": "AE",
+        "airport_code": "EWN",
+        "airport_drive_min": 33,
+        "days_on_market": 67,
+        "original_list_price": 950000,
+        "price_reduction": 75000,
+        "composite_score": 72.5,
+        "recommendation": "Monitor Closely",
+        "estimated_egi_annual": 75458.127833088,
+        "estimated_monthly_cf_cash": 1429.8439860906667,
+        "estimated_monthly_cf_dscr": -2958.18101795849,
+        "estimated_irr_cash_5yr": 0.06545955938610419,
+        "url": "https://example.com/seed_cc_03",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 100.0,
+            "weight": 0.25,
+            "weighted": 25.0,
+            "note": "Cash CF: +$1,430/mo  (strongly positive)  |  DSCR CF: $-2,958/mo"
+          },
+          {
+            "name": "market",
+            "score": 68.3,
+            "weight": 0.2,
+            "weighted": 13.66,
+            "note": "Region score: 68.3/100"
+          },
+          {
+            "name": "location",
+            "score": 77.2,
+            "weight": 0.2,
+            "weighted": 15.44,
+            "note": "0.4mi to beach  |  EWN 33min  |  flood zone AE"
+          },
+          {
+            "name": "value",
+            "score": 24.3,
+            "weight": 0.2,
+            "weighted": 4.86,
+            "note": "$875,000 vs $620,000 median (141%)  |  DOM 67  |  reduced 7.9% ($75,000)"
+          },
+          {
+            "name": "risk",
+            "score": 90.0,
+            "weight": 0.15,
+            "weighted": 13.5,
+            "note": "Flood zone AE/A (moderate)"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "listing_id": "seed_iop_02",
+        "address": "502 Palm Blvd",
+        "city": "Isle of Palms",
+        "state": "SC",
+        "zip_code": "29451",
+        "market_id": "sc_isle_of_palms_charleston",
+        "price": 1175000,
+        "bedrooms": 4,
+        "bathrooms": 3.5,
+        "sqft": 2420,
+        "year_built": 2020,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": true,
+        "beach_distance_miles": 0.3,
+        "flood_zone": "AE",
+        "airport_code": "CHS",
+        "airport_drive_min": 32,
+        "days_on_market": 18,
+        "original_list_price": 1195000,
+        "price_reduction": 20000,
+        "composite_score": 71.6,
+        "recommendation": "Monitor Closely",
+        "estimated_egi_annual": 90980.01193881601,
+        "estimated_monthly_cf_cash": 1870.2093282346675,
+        "estimated_monthly_cf_dscr": -4022.2813914884864,
+        "estimated_irr_cash_5yr": 0.06427682496219267,
+        "url": "https://example.com/seed_iop_02",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 100.0,
+            "weight": 0.25,
+            "weighted": 25.0,
+            "note": "Cash CF: +$1,870/mo  (strongly positive)  |  DSCR CF: $-4,022/mo"
+          },
+          {
+            "name": "market",
+            "score": 68.9,
+            "weight": 0.2,
+            "weighted": 13.78,
+            "note": "Region score: 68.9/100"
+          },
+          {
+            "name": "location",
+            "score": 77.2,
+            "weight": 0.2,
+            "weighted": 15.44,
+            "note": "0.3mi to beach  |  CHS 32min  |  flood zone AE"
+          },
+          {
+            "name": "value",
+            "score": 23.3,
+            "weight": 0.2,
+            "weighted": 4.67,
+            "note": "$1,175,000 vs $1,050,000 median (112%)  |  DOM 18  |  reduced 1.7% ($20,000)"
+          },
+          {
+            "name": "risk",
+            "score": 85.0,
+            "weight": 0.15,
+            "weighted": 12.75,
+            "note": "Flood zone AE/A (moderate)  |  Market reg: evolving (benign)"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "listing_id": "seed_obx_02",
+        "address": "403 E Admiral St",
+        "city": "Nags Head",
+        "state": "NC",
+        "zip_code": "27959",
+        "market_id": "nc_obx_dare",
+        "price": 849000,
+        "bedrooms": 4,
+        "bathrooms": 3.0,
+        "sqft": 2150,
+        "year_built": 2015,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": true,
+        "beach_distance_miles": 0.1,
+        "flood_zone": "AE",
+        "airport_code": "ORF",
+        "airport_drive_min": 80,
+        "days_on_market": 54,
+        "original_list_price": 899000,
+        "price_reduction": 50000,
+        "composite_score": 71.2,
+        "recommendation": "Monitor Closely",
+        "estimated_egi_annual": 110460.31660984323,
+        "estimated_monthly_cf_cash": 3655.1097174869356,
+        "estimated_monthly_cf_dscr": -602.5282578704742,
+        "estimated_irr_cash_5yr": 0.08948333799648125,
+        "url": "https://example.com/seed_obx_02",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 100.0,
+            "weight": 0.25,
+            "weighted": 25.0,
+            "note": "Cash CF: +$3,655/mo  (strongly positive)  |  DSCR CF: $-603/mo"
+          },
+          {
+            "name": "market",
+            "score": 67.7,
+            "weight": 0.2,
+            "weighted": 13.54,
+            "note": "Region score: 67.7/100"
+          },
+          {
+            "name": "location",
+            "score": 63.2,
+            "weight": 0.2,
+            "weighted": 12.64,
+            "note": "0.1mi to beach  |  ORF 80min  |  flood zone AE"
+          },
+          {
+            "name": "value",
+            "score": 32.6,
+            "weight": 0.2,
+            "weighted": 6.52,
+            "note": "$849,000 vs $725,000 median (117%)  |  DOM 54  |  reduced 5.6% ($50,000)"
+          },
+          {
+            "name": "risk",
+            "score": 90.0,
+            "weight": 0.15,
+            "weighted": 13.5,
+            "note": "Flood zone AE/A (moderate)"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "listing_id": "seed_ti_02",
+        "address": "115 Bridgette Blvd",
+        "city": "North Topsail Beach",
+        "state": "NC",
+        "zip_code": "28460",
+        "market_id": "nc_topsail_pender",
+        "price": 745000,
+        "bedrooms": 3,
+        "bathrooms": 3.5,
+        "sqft": 2010,
+        "year_built": 2020,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": true,
+        "beach_distance_miles": 0.1,
+        "flood_zone": "AE",
+        "airport_code": "ILM",
+        "airport_drive_min": 50,
+        "days_on_market": 21,
+        "original_list_price": 765000,
+        "price_reduction": 20000,
+        "composite_score": 67.9,
+        "recommendation": "Investigate Further",
+        "estimated_egi_annual": 57470.64739416001,
+        "estimated_monthly_cf_cash": 364.22061618000106,
+        "estimated_monthly_cf_dscr": -3371.8692444104236,
+        "estimated_irr_cash_5yr": 0.0426511152281919,
+        "url": "https://example.com/seed_ti_02",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 94.6,
+            "weight": 0.25,
+            "weighted": 23.64,
+            "note": "Cash CF: +$364/mo  (positive)  |  DSCR CF: $-3,372/mo"
+          },
+          {
+            "name": "market",
+            "score": 65.7,
+            "weight": 0.2,
+            "weighted": 13.14,
+            "note": "Region score: 65.7/100"
+          },
+          {
+            "name": "location",
+            "score": 78.0,
+            "weight": 0.2,
+            "weighted": 15.6,
+            "note": "0.1mi to beach  |  ILM 50min  |  flood zone AE"
+          },
+          {
+            "name": "value",
+            "score": 9.9,
+            "weight": 0.2,
+            "weighted": 1.98,
+            "note": "$745,000 vs $545,000 median (137%)  |  DOM 21  |  reduced 2.6% ($20,000)"
+          },
+          {
+            "name": "risk",
+            "score": 90.0,
+            "weight": 0.15,
+            "weighted": 13.5,
+            "note": "Flood zone AE/A (moderate)"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "listing_id": "seed_cc_02",
+        "address": "87 Bogue Sound Ln",
+        "city": "Atlantic Beach",
+        "state": "NC",
+        "zip_code": "28512",
+        "market_id": "nc_crystal_coast_carteret",
+        "price": 624000,
+        "bedrooms": 3,
+        "bathrooms": 3.0,
+        "sqft": 1650,
+        "year_built": 2014,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": false,
+        "beach_distance_miles": 1.8,
+        "flood_zone": "X",
+        "airport_code": "EWN",
+        "airport_drive_min": 37,
+        "days_on_market": 19,
+        "original_list_price": 624000,
+        "price_reduction": 0,
+        "composite_score": 64.7,
+        "recommendation": "Investigate Further",
+        "estimated_egi_annual": 45769.9242,
+        "estimated_monthly_cf_cash": -609.5063166666665,
+        "estimated_monthly_cf_dscr": -3738.7950052685806,
+        "estimated_irr_cash_5yr": 0.03592627409184147,
+        "url": "https://example.com/seed_cc_02",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 55.6,
+            "weight": 0.25,
+            "weighted": 13.9,
+            "note": "Cash CF: $-610/mo  (at floor)  |  DSCR CF: $-3,739/mo"
+          },
+          {
+            "name": "market",
+            "score": 68.3,
+            "weight": 0.2,
+            "weighted": 13.66,
+            "note": "Region score: 68.3/100"
+          },
+          {
+            "name": "location",
+            "score": 83.0,
+            "weight": 0.2,
+            "weighted": 16.6,
+            "note": "1.8mi to beach  |  EWN 37min  |  flood zone X"
+          },
+          {
+            "name": "value",
+            "score": 27.8,
+            "weight": 0.2,
+            "weighted": 5.55,
+            "note": "$624,000 vs $620,000 median (101%)  |  DOM 19  |  reduced 0.0% ($0)"
+          },
+          {
+            "name": "risk",
+            "score": 100.0,
+            "weight": 0.15,
+            "weighted": 15.0,
+            "note": "No major risk flags"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "listing_id": "seed_mb_01",
+        "address": "4422 N Ocean Blvd",
+        "city": "North Myrtle Beach",
+        "state": "SC",
+        "zip_code": "29582",
+        "market_id": "sc_myrtle_beach_horry",
+        "price": 618000,
+        "bedrooms": 3,
+        "bathrooms": 3.0,
+        "sqft": 1680,
+        "year_built": 2018,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": true,
+        "beach_distance_miles": 0.4,
+        "flood_zone": "X",
+        "airport_code": "MYR",
+        "airport_drive_min": 10,
+        "days_on_market": 48,
+        "original_list_price": 660000,
+        "price_reduction": 42000,
+        "composite_score": 64.5,
+        "recommendation": "Investigate Further",
+        "estimated_egi_annual": 38641.679796720004,
+        "estimated_monthly_cf_cash": -534.2766836066663,
+        "estimated_monthly_cf_dscr": -3633.4760578950995,
+        "estimated_irr_cash_5yr": 0.0066701944494478626,
+        "url": "https://example.com/seed_mb_01",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 58.6,
+            "weight": 0.25,
+            "weighted": 14.66,
+            "note": "Cash CF: $-534/mo  (at floor)  |  DSCR CF: $-3,633/mo"
+          },
+          {
+            "name": "market",
+            "score": 61.0,
+            "weight": 0.2,
+            "weighted": 12.2,
+            "note": "Region score: 61.0/100"
+          },
+          {
+            "name": "location",
+            "score": 98.2,
+            "weight": 0.2,
+            "weighted": 19.64,
+            "note": "0.4mi to beach  |  MYR 10min  |  flood zone X"
+          },
+          {
+            "name": "value",
+            "score": 18.6,
+            "weight": 0.2,
+            "weighted": 3.72,
+            "note": "$618,000 vs $410,000 median (151%)  |  DOM 48  |  reduced 6.4% ($42,000)"
+          },
+          {
+            "name": "risk",
+            "score": 95.0,
+            "weight": 0.15,
+            "weighted": 14.25,
+            "note": "Market reg: evolving (benign)"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "listing_id": "seed_ti_01",
+        "address": "636 N Anderson Blvd",
+        "city": "Surf City",
+        "state": "NC",
+        "zip_code": "28445",
+        "market_id": "nc_topsail_pender",
+        "price": 649000,
+        "bedrooms": 3,
+        "bathrooms": 3.0,
+        "sqft": 1720,
+        "year_built": 2017,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": false,
+        "beach_distance_miles": 0.2,
+        "flood_zone": "AE",
+        "airport_code": "ILM",
+        "airport_drive_min": 45,
+        "days_on_market": 36,
+        "original_list_price": 675000,
+        "price_reduction": 26000,
+        "composite_score": 63.8,
+        "recommendation": "Investigate Further",
+        "estimated_egi_annual": 43711.140544500005,
+        "estimated_monthly_cf_cash": -462.40495462499956,
+        "estimated_monthly_cf_dscr": -3717.0657861997456,
+        "estimated_irr_cash_5yr": 0.028488661985505898,
+        "url": "https://example.com/seed_ti_01",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 61.5,
+            "weight": 0.25,
+            "weighted": 15.38,
+            "note": "Cash CF: $-462/mo  (within floor)  |  DSCR CF: $-3,717/mo"
+          },
+          {
+            "name": "market",
+            "score": 65.7,
+            "weight": 0.2,
+            "weighted": 13.14,
+            "note": "Region score: 65.7/100"
+          },
+          {
+            "name": "location",
+            "score": 83.2,
+            "weight": 0.2,
+            "weighted": 16.64,
+            "note": "0.2mi to beach  |  ILM 45min  |  flood zone AE"
+          },
+          {
+            "name": "value",
+            "score": 25.5,
+            "weight": 0.2,
+            "weighted": 5.1,
+            "note": "$649,000 vs $545,000 median (119%)  |  DOM 36  |  reduced 3.9% ($26,000)"
+          },
+          {
+            "name": "risk",
+            "score": 90.0,
+            "weight": 0.15,
+            "weighted": 13.5,
+            "note": "Flood zone AE/A (moderate)"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "listing_id": "seed_wil_01",
+        "address": "308 Wrightsville Ave",
+        "city": "Wrightsville Beach",
+        "state": "NC",
+        "zip_code": "28480",
+        "market_id": "nc_wilmington_nhc",
+        "price": 985000,
+        "bedrooms": 3,
+        "bathrooms": 3.0,
+        "sqft": 1980,
+        "year_built": 2016,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": false,
+        "beach_distance_miles": 0.1,
+        "flood_zone": "AE",
+        "airport_code": "ILM",
+        "airport_drive_min": 12,
+        "days_on_market": 72,
+        "original_list_price": 1050000,
+        "price_reduction": 65000,
+        "composite_score": 59.0,
+        "recommendation": "Investigate Further",
+        "estimated_egi_annual": 52729.2040275,
+        "estimated_monthly_cf_cash": -830.8996643749997,
+        "estimated_monthly_cf_dscr": -5770.562097504622,
+        "estimated_irr_cash_5yr": 0.015983864443250947,
+        "url": "https://example.com/seed_wil_01",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 46.8,
+            "weight": 0.25,
+            "weighted": 11.69,
+            "note": "Cash CF: $-831/mo  (at floor)  |  DSCR CF: $-5,771/mo"
+          },
+          {
+            "name": "market",
+            "score": 59.3,
+            "weight": 0.2,
+            "weighted": 11.86,
+            "note": "Region score: 59.3/100"
+          },
+          {
+            "name": "location",
+            "score": 91.2,
+            "weight": 0.2,
+            "weighted": 18.24,
+            "note": "0.1mi to beach  |  ILM 12min  |  flood zone AE"
+          },
+          {
+            "name": "value",
+            "score": 22.3,
+            "weight": 0.2,
+            "weighted": 4.46,
+            "note": "$985,000 vs $585,000 median (168%)  |  DOM 72  |  reduced 6.2% ($65,000)"
+          },
+          {
+            "name": "risk",
+            "score": 85.0,
+            "weight": 0.15,
+            "weighted": 12.75,
+            "note": "Flood zone AE/A (moderate)  |  Market reg: evolving (benign)"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "listing_id": "seed_pi_03",
+        "address": "25 Sea Island Dr",
+        "city": "Pawleys Island",
+        "state": "SC",
+        "zip_code": "29585",
+        "market_id": "sc_pawleys_georgetown",
+        "price": 638000,
+        "bedrooms": 3,
+        "bathrooms": 3.0,
+        "sqft": 1820,
+        "year_built": 2003,
+        "renovation_year": null,
+        "property_type": "single_family",
+        "has_hoa": false,
+        "hoa_monthly": 0,
+        "has_pool": false,
+        "beach_distance_miles": 4.5,
+        "flood_zone": "X",
+        "airport_code": "MYR",
+        "airport_drive_min": 26,
+        "days_on_market": 88,
+        "original_list_price": 699000,
+        "price_reduction": 61000,
+        "composite_score": 53.8,
+        "recommendation": "Pass",
+        "estimated_egi_annual": 35229.84894,
+        "estimated_monthly_cf_cash": -2584.0959216666665,
+        "estimated_monthly_cf_dscr": -5783.593010333367,
+        "estimated_irr_cash_5yr": -0.009506306007844311,
+        "url": "https://example.com/seed_pi_03",
+        "factors": [
+          {
+            "name": "financial",
+            "score": 8.3,
+            "weight": 0.25,
+            "weighted": 2.08,
+            "note": "Cash CF: $-2,584/mo  (well below floor)  |  DSCR CF: $-5,784/mo"
+          },
+          {
+            "name": "market",
+            "score": 69.0,
+            "weight": 0.2,
+            "weighted": 13.8,
+            "note": "Region score: 69.0/100"
+          },
+          {
+            "name": "location",
+            "score": 79.4,
+            "weight": 0.2,
+            "weighted": 15.88,
+            "note": "4.5mi to beach  |  MYR 26min  |  flood zone X"
+          },
+          {
+            "name": "value",
+            "score": 45.5,
+            "weight": 0.2,
+            "weighted": 9.1,
+            "note": "$638,000 vs $560,000 median (114%)  |  DOM 88  |  reduced 8.7% ($61,000)"
+          },
+          {
+            "name": "risk",
+            "score": 86.0,
+            "weight": 0.15,
+            "weighted": 12.9,
+            "note": "Age 22yr \u2014 near max"
+          }
+        ]
+      }
+    ],
+    "rejected": [
+      {
+        "listing_id": "seed_obx_03",
+        "address": "812 Ocean Trail",
+        "city": "Corolla",
+        "state": "NC",
+        "price": 995000,
+        "url": "https://example.com/seed_obx_03",
+        "failed_reasons": [
+          "Airport ORF is 92 min drive (preference \u226490)"
+        ]
+      },
+      {
+        "listing_id": "seed_hhh_02",
+        "address": "45 Plantation Club Dr",
+        "city": "Hilton Head Island",
+        "state": "SC",
+        "price": 940000,
+        "url": "https://example.com/seed_hhh_02",
+        "failed_reasons": [
+          "HOA explicitly prohibits short-term rentals"
+        ]
+      },
+      {
+        "listing_id": "seed_pi_01",
+        "address": "314 Litchfield Beach Dr",
+        "city": "Pawleys Island",
+        "state": "SC",
+        "price": 589000,
+        "url": "https://example.com/seed_pi_01",
+        "failed_reasons": [
+          "Price $589,000 below minimum $600,000"
+        ]
+      },
+      {
+        "listing_id": "seed_fail_01",
+        "address": "99 Oceanfront Way",
+        "city": "Kiawah Island",
+        "state": "SC",
+        "price": 1320000,
+        "url": "https://example.com/seed_fail_01",
+        "failed_reasons": [
+          "Price $1,320,000 exceeds maximum $1,200,000",
+          "HOA explicitly prohibits short-term rentals",
+          "Market 'Kiawah / Seabrook Islands' is RESTRICTIVE for STR \u2014 high ban risk"
+        ]
+      },
+      {
+        "listing_id": "seed_fail_02",
+        "address": "14 Egret Marsh Ct",
+        "city": "Kiawah Island",
+        "state": "SC",
+        "price": 895000,
+        "url": "https://example.com/seed_fail_02",
+        "failed_reasons": [
+          "HOA explicitly prohibits short-term rentals",
+          "Market 'Kiawah / Seabrook Islands' is RESTRICTIVE for STR \u2014 high ban risk"
+        ]
+      }
+    ]
+  },
+  "alerts": {
+    "immediate": [],
+    "weekly": [
+      {
+        "alert_id": "nc_obx_dare__mkt_adr_surge__2026-04-28",
+        "severity": "medium",
+        "alert_type": "mkt_adr_surge",
+        "market_name": "Outer Banks (Dare County)",
+        "title": "ADR surging in Outer Banks (Dare County): +12.4% \u2014 raise prices or sell signal",
+        "body": "ADR in Outer Banks (Dare County) jumped 12.4% to $415. If you own here: raise nightly rates immediately. If prospective buyer: market strengthening, but competition for inventory will increase.",
+        "action_required": "If owner: update nightly rates now. If prospective: accelerate property search.",
+        "triggered_at": "2026-04-28",
+        "url": null,
+        "is_new": true,
+        "positive": true,
+        "metric_label": "Median ADR (3bd)",
+        "metric_before": 369.35,
+        "metric_after": 415.0
+      },
+      {
+        "alert_id": "sc_myrtle_beach_horry__mkt_adr_drop__2026-04-28",
+        "severity": "medium",
+        "alert_type": "mkt_adr_drop",
+        "market_name": "Myrtle Beach (Grand Strand)",
+        "title": "ADR moderately lower in Myrtle Beach (Grand Strand): -8.0%",
+        "body": "ADR slipped 8.0% from $250 to $230. Monitor next 2 weeks.",
+        "action_required": "Watch for continued decline before adjusting strategy.",
+        "triggered_at": "2026-04-28",
+        "url": null,
+        "is_new": true,
+        "positive": false,
+        "metric_label": "Median ADR (3bd)",
+        "metric_before": 250.0,
+        "metric_after": 230.0
+      },
+      {
+        "alert_id": "news__art_001",
+        "severity": "medium",
+        "alert_type": "reg_zoning_change",
+        "market_name": "Asheville",
+        "title": "Buncombe County Commission votes to extend owner-occupancy STR rule to unincorporated areas",
+        "body": "The Buncombe County Commission voted 4-3 Tuesday to extend Asheville's owner-occupancy short-term rental requirement to unincorporated county areas, effective September 1, 2025. Non-owner-occupied vacation rental permits will no longer be issued outside city limits. Existing permit holders have 90 days to comply or cease operations.",
+        "action_required": "Identify which zones are affected. Verify any target property is in a permissive zone. Request zoning verification letter from county before purchase.",
+        "triggered_at": "2025-04-23",
+        "url": "https://example.com/buncombe-str-ordinance",
+        "is_new": false,
+        "positive": false,
+        "metric_label": null,
+        "metric_before": null,
+        "metric_after": null
+      },
+      {
+        "alert_id": "news__art_002",
+        "severity": "medium",
+        "alert_type": "reg_zoning_change",
+        "market_name": "Hilton Head Island",
+        "title": "SC House Bill 4250 introduced: allows municipalities to require owner-occupancy for vacation rentals",
+        "body": "South Carolina House Bill 4250, introduced this week, would amend the 2020 STR preemption law to allow municipalities to require owner-occupancy for short-term rentals in residential zones. If passed, it could affect all SC coastal markets including Hilton Head, Isle of Palms, and Pawleys Island. The bill is currently in the House Judiciary Committee with a hearing scheduled for May 14.",
+        "action_required": "Identify which zones are affected. Verify any target property is in a permissive zone. Request zoning verification letter from county before purchase.",
+        "triggered_at": "2025-04-21",
+        "url": "https://example.com/sc-hb4250",
+        "is_new": false,
+        "positive": false,
+        "metric_label": null,
+        "metric_before": null,
+        "metric_after": null
+      }
+    ],
+    "all": [
+      {
+        "alert_id": "news__art_003",
+        "severity": "high",
+        "alert_type": "reg_preemption",
+        "market_name": "Asheville",
+        "title": "North Carolina Senate Bill 608 'STR Freedom Act' would preempt local short-term rental bans statewide",
+        "body": "NC Senate Bill 608, introduced by Sen. Johnson (R-Wake), would prohibit municipalities from banning short-term rentals that hold a valid state STR license. The bill passed the Senate Commerce Committee on a 7-2 vote and heads to the full Senate floor. If enacted, it would effectively override Asheville's owner-occupancy requirement and prevent similar bans in other NC cities.",
+        "action_required": "Track bill progress through legislature. If passed, removes a key risk from SC/NC markets. No immediate action required.",
+        "triggered_at": "2025-04-22",
+        "url": "https://example.com/nc-sb608",
+        "is_new": false,
+        "positive": true,
+        "metric_label": null,
+        "metric_before": null,
+        "metric_after": null
+      },
+      {
+        "alert_id": "news__art_004",
+        "severity": "high",
+        "alert_type": "reg_permit_change",
+        "market_name": "Isle of Palms / Sullivan's Island",
+        "title": "Isle of Palms STR permit cap reached \u2014 no new short-term rental licenses until October review",
+        "body": "The City of Isle of Palms announced this week that its annual cap of 1,400 active STR permits has been reached. No new permits will be issued until the October 2025 annual review. Existing permits are automatically renewed. Buyers should verify permit transferability before closing on any IOP property intended for short-term rental use.",
+        "action_required": "Note new permit requirements and fees. Verify if cap affects new purchases. If buying: confirm permit availability before closing.",
+        "triggered_at": "2025-04-20",
+        "url": "https://example.com/iop-permit-cap",
+        "is_new": false,
+        "positive": false,
+        "metric_label": null,
+        "metric_before": null,
+        "metric_after": null
+      },
+      {
+        "alert_id": "news__art_006",
+        "severity": "high",
+        "alert_type": "reg_permit_change",
+        "market_name": "Outer Banks (Dare County)",
+        "title": "Dare County launches new STR registry \u2014 $75 annual fee, no permit caps or new restrictions",
+        "body": "Dare County announced a new short-term rental registry effective July 1, 2025, requiring all STR operators to register annually at a fee of $75/year. The registry is informational only \u2014 no caps on new registrations and no owner-occupancy requirements. Officials emphasized the registry is for emergency contact purposes, not regulation.",
+        "action_required": "Note new permit requirements and fees. Verify if cap affects new purchases. If buying: confirm permit availability before closing.",
+        "triggered_at": "2025-04-19",
+        "url": "https://example.com/dare-registry",
+        "is_new": false,
+        "positive": false,
+        "metric_label": null,
+        "metric_before": null,
+        "metric_after": null
+      },
+      {
+        "alert_id": "nc_obx_dare__mkt_adr_surge__2026-04-28",
+        "severity": "medium",
+        "alert_type": "mkt_adr_surge",
+        "market_name": "Outer Banks (Dare County)",
+        "title": "ADR surging in Outer Banks (Dare County): +12.4% \u2014 raise prices or sell signal",
+        "body": "ADR in Outer Banks (Dare County) jumped 12.4% to $415. If you own here: raise nightly rates immediately. If prospective buyer: market strengthening, but competition for inventory will increase.",
+        "action_required": "If owner: update nightly rates now. If prospective: accelerate property search.",
+        "triggered_at": "2026-04-28",
+        "url": null,
+        "is_new": true,
+        "positive": true,
+        "metric_label": "Median ADR (3bd)",
+        "metric_before": 369.35,
+        "metric_after": 415.0
+      },
+      {
+        "alert_id": "sc_myrtle_beach_horry__mkt_adr_drop__2026-04-28",
+        "severity": "medium",
+        "alert_type": "mkt_adr_drop",
+        "market_name": "Myrtle Beach (Grand Strand)",
+        "title": "ADR moderately lower in Myrtle Beach (Grand Strand): -8.0%",
+        "body": "ADR slipped 8.0% from $250 to $230. Monitor next 2 weeks.",
+        "action_required": "Watch for continued decline before adjusting strategy.",
+        "triggered_at": "2026-04-28",
+        "url": null,
+        "is_new": true,
+        "positive": false,
+        "metric_label": "Median ADR (3bd)",
+        "metric_before": 250.0,
+        "metric_after": 230.0
+      },
+      {
+        "alert_id": "news__art_001",
+        "severity": "medium",
+        "alert_type": "reg_zoning_change",
+        "market_name": "Asheville",
+        "title": "Buncombe County Commission votes to extend owner-occupancy STR rule to unincorporated areas",
+        "body": "The Buncombe County Commission voted 4-3 Tuesday to extend Asheville's owner-occupancy short-term rental requirement to unincorporated county areas, effective September 1, 2025. Non-owner-occupied vacation rental permits will no longer be issued outside city limits. Existing permit holders have 90 days to comply or cease operations.",
+        "action_required": "Identify which zones are affected. Verify any target property is in a permissive zone. Request zoning verification letter from county before purchase.",
+        "triggered_at": "2025-04-23",
+        "url": "https://example.com/buncombe-str-ordinance",
+        "is_new": false,
+        "positive": false,
+        "metric_label": null,
+        "metric_before": null,
+        "metric_after": null
+      },
+      {
+        "alert_id": "news__art_002",
+        "severity": "medium",
+        "alert_type": "reg_zoning_change",
+        "market_name": "Hilton Head Island",
+        "title": "SC House Bill 4250 introduced: allows municipalities to require owner-occupancy for vacation rentals",
+        "body": "South Carolina House Bill 4250, introduced this week, would amend the 2020 STR preemption law to allow municipalities to require owner-occupancy for short-term rentals in residential zones. If passed, it could affect all SC coastal markets including Hilton Head, Isle of Palms, and Pawleys Island. The bill is currently in the House Judiciary Committee with a hearing scheduled for May 14.",
+        "action_required": "Identify which zones are affected. Verify any target property is in a permissive zone. Request zoning verification letter from county before purchase.",
+        "triggered_at": "2025-04-21",
+        "url": "https://example.com/sc-hb4250",
+        "is_new": false,
+        "positive": false,
+        "metric_label": null,
+        "metric_before": null,
+        "metric_after": null
+      }
+    ]
+  }
+}

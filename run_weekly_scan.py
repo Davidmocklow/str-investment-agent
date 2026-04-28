@@ -7,6 +7,10 @@ Run via CI:   GitHub Actions calls this on a schedule.
 Writes:
   data/weekly_report.json   — latest scan (dashboard reads this)
   data/scan_history/YYYY-MM-DD.json — timestamped archive
+
+Listing source selection (automatic):
+  - If RAPIDAPI_KEY is set in .env → uses live Zillow listings
+  - Otherwise                      → uses seeded example data
 """
 
 from __future__ import annotations
@@ -14,6 +18,9 @@ from __future__ import annotations
 import json
 import os
 from datetime import datetime, timezone
+
+from dotenv import load_dotenv
+load_dotenv()
 
 from real_estate_agent.scoring.markets import MARKETS
 from real_estate_agent.scoring.scorer import rank_markets
@@ -96,7 +103,17 @@ def run(scan_date: str | None = None, email_address: str = "") -> dict:
     ]
 
     # ── 2. Property pipeline ─────────────────────────────────────────────────
-    sources = [SeedSource()]
+    rapidapi_key = os.getenv("RAPIDAPI_KEY", "")
+    if rapidapi_key:
+        from real_estate_agent.properties.sources.zillow import ZillowSource
+        sources = [ZillowSource(api_key=rapidapi_key)]
+        source_label = "Zillow (live)"
+        print("  Using live Zillow listings via RapidAPI")
+    else:
+        sources = [SeedSource()]
+        source_label = "seed data (no RAPIDAPI_KEY set)"
+        print("  No RAPIDAPI_KEY found — using seeded example data")
+
     passed, rejected = run_pipeline(sources, personal_use_weeks=4)
 
     properties_payload = {
@@ -182,6 +199,7 @@ def run(scan_date: str | None = None, email_address: str = "") -> dict:
             "alerts_total": len(alert_result["all"]),
             "alerts_new": len(new_alerts),
             "alerts_immediate": len(alert_result["immediate"]),
+            "listing_source": source_label,
         },
         "markets": markets_payload,
         "properties": properties_payload,

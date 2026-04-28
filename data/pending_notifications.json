@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-04-25T14:17:27.950161",
+  "alerts": [
+    {
+      "alert_id": "news__art_003",
+      "severity": "high",
+      "type": "reg_preemption",
+      "market": "Asheville",
+      "title": "North Carolina Senate Bill 608 'STR Freedom Act' would preempt local short-term rental bans statewide",
+      "action": "Track bill progress through legislature. If passed, removes a key risk from SC/NC markets. No immediate action required.",
+      "date": "2025-04-22",
+      "url": "https://example.com/nc-sb608",
+      "positive": true
+    },
+    {
+      "alert_id": "news__art_004",
+      "severity": "high",
+      "type": "reg_permit_change",
+      "market": "Isle of Palms / Sullivan's Island",
+      "title": "Isle of Palms STR permit cap reached \u2014 no new short-term rental licenses until October review",
+      "action": "Note new permit requirements and fees. Verify if cap affects new purchases. If buying: confirm permit availability before closing.",
+      "date": "2025-04-20",
+      "url": "https://example.com/iop-permit-cap",
+      "positive": false
+    },
+    {
+      "alert_id": "news__art_006",
+      "severity": "high",
+      "type": "reg_permit_change",
+      "market": "Outer Banks (Dare County)",
+      "title": "Dare County launches new STR registry \u2014 $75 annual fee, no permit caps or new restrictions",
+      "action": "Note new permit requirements and fees. Verify if cap affects new purchases. If buying: confirm permit availability before closing.",
+      "date": "2025-04-19",
+      "url": "https://example.com/dare-registry",
+      "positive": false
+    }
+  ]
+}
