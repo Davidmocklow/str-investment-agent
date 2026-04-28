@@ -111,10 +111,11 @@ st.divider()
 
 
 # ── Tabs ──────────────────────────────────────────────────────────────────────
-tab_alerts, tab_props, tab_markets = st.tabs([
+tab_alerts, tab_props, tab_markets, tab_analyze = st.tabs([
     f"🚨 Alerts ({summary['alerts_new']} new)",
     f"🏆 Properties ({summary['properties_passed']} passed)",
     f"📊 Markets ({summary['markets_scored']} scored)",
+    "🔍 Analyze a Property",
 ])
 
 
@@ -413,3 +414,267 @@ with tab_markets:
                 for m in reg_risky
             )
         )
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# ANALYZE A PROPERTY TAB
+# ══════════════════════════════════════════════════════════════════════════════
+with tab_analyze:
+
+    st.subheader("🔍 Instant Property Analysis")
+    st.markdown(
+        "Paste any Zillow listing URL below and get an instant scoring, "
+        "financial pro forma, and investment recommendation — the same analysis "
+        "the weekly scan runs on every property."
+    )
+
+    col_url, col_key = st.columns([3, 1])
+    with col_url:
+        zillow_url = st.text_input(
+            "Zillow listing URL",
+            placeholder="https://www.zillow.com/homedetails/123-Ocean-Dr-Emerald-Isle-NC-28594/12345678_zpid/",
+        )
+    with col_key:
+        api_key_input = st.text_input(
+            "RapidAPI key",
+            type="password",
+            value=os.getenv("RAPIDAPI_KEY", ""),
+            help="Your private-zillow RapidAPI key. Add RAPIDAPI_KEY to .env to pre-fill this.",
+        )
+
+    # Down payment override
+    st.markdown("**Financing assumptions** (optional overrides)")
+    fc1, fc2, fc3 = st.columns(3)
+    down_pct   = fc1.slider("Down payment %", 20, 100, 30, step=5)
+    dscr_rate  = fc2.slider("DSCR rate %", 6.0, 10.0, 7.75, step=0.25)
+    hold_years = fc3.slider("Hold period (years)", 3, 10, 5)
+
+    analyze_btn = st.button("▶ Analyze this property", type="primary", use_container_width=True)
+
+    if analyze_btn:
+        if not zillow_url:
+            st.warning("Paste a Zillow URL above first.")
+        elif not api_key_input:
+            st.warning(
+                "Enter your RapidAPI key. "
+                "Get one free at [rapidapi.com](https://rapidapi.com/apimaker/api/private-zillow)."
+            )
+        else:
+            with st.spinner("Fetching listing from Zillow…"):
+                from real_estate_agent.properties.sources.zillow_url import lookup_by_url
+                listing, error = lookup_by_url(zillow_url, api_key_input)
+
+            if error:
+                st.error(f"**Could not fetch listing:** {error}")
+            elif listing is None:
+                st.error("No data returned. Check the URL is a valid Zillow listing page.")
+            else:
+                # ── Property header ───────────────────────────────────────────
+                st.success(f"✓ Fetched: **{listing.address}, {listing.city}, {listing.state}**")
+                st.divider()
+
+                # ── Hard filter check ─────────────────────────────────────────
+                from real_estate_agent.scoring.markets import MARKETS_BY_ID
+                from real_estate_agent.properties.filters import apply_filters
+                from real_estate_agent.properties.enrichment import enrich
+                from real_estate_agent.properties.scorer import score_property, recommendation, WEIGHTS
+                from real_estate_agent.scoring.scorer import score_market
+                from real_estate_agent.financial.models import (
+                    ScenarioInputs, FinancingInputs, FinancingType,
+                )
+                from real_estate_agent.financial.proforma import generate_proforma
+                from real_estate_agent.financial.metrics import SELLING_COST_PCT
+
+                snapshot = MARKETS_BY_ID.get(listing.market_id)
+                market_name = snapshot.name if snapshot else "Outside tracked markets"
+
+                # Show basic facts
+                f1, f2, f3, f4, f5 = st.columns(5)
+                f1.metric("Price", f"${listing.price:,.0f}")
+                f2.metric("Beds / Baths", f"{listing.bedrooms}bd / {listing.bathrooms}ba")
+                f3.metric("Sqft / Year", f"{listing.sqft:,} / {listing.year_built}")
+                f4.metric("Market", market_name)
+                f5.metric(
+                    "Beach",
+                    f"{listing.beach_distance_miles:.1f}mi" if listing.beach_distance_miles is not None else "N/A",
+                )
+
+                st.markdown(
+                    f"Pool: {'✓' if listing.has_pool else '✗'}  ·  "
+                    f"HOA: {'$' + str(int(listing.hoa_monthly)) + '/mo' if listing.has_hoa else 'None'}  ·  "
+                    f"Flood zone: {listing.flood_zone}  ·  "
+                    f"Airport: {listing.airport_code} ({listing.airport_drive_min} min)  ·  "
+                    f"DOM: {listing.days_on_market} days"
+                )
+
+                if snapshot:
+                    fr = apply_filters(listing, snapshot)
+                    if not fr.passed:
+                        st.error("🚫 **This property fails your hard filters:**")
+                        for reason in fr.failed_reasons:
+                            st.markdown(f"  - {reason}")
+                        st.markdown("The financial analysis below is shown for reference only.")
+                    else:
+                        st.success("✅ Passes all hard filters")
+                else:
+                    st.warning(
+                        f"⚠️ '{listing.city}' is outside your 13 tracked markets. "
+                        "Financial model uses Crystal Coast averages as a proxy — treat with caution."
+                    )
+
+                # ── Financial model ────────────────────────────────────────────
+                st.divider()
+                st.subheader("💰 Financial Analysis")
+
+                with st.spinner("Running financial model…"):
+                    if snapshot:
+                        enrich(listing, snapshot, personal_use_weeks=4)
+                    else:
+                        # Fallback: use Crystal Coast as proxy market
+                        proxy = MARKETS_BY_ID["nc_crystal_coast_carteret"]
+                        enrich(listing, proxy, personal_use_weeks=4)
+
+                cf_cash = listing.estimated_monthly_cf_cash or 0
+                cf_dscr = listing.estimated_monthly_cf_dscr or 0
+                irr     = listing.estimated_irr_cash_5yr
+
+                m1, m2, m3, m4 = st.columns(4)
+                m1.metric(
+                    "Cash CF / mo",
+                    f"${cf_cash:+,.0f}",
+                    "within -$1k floor" if cf_cash >= -1000 else "⚠ below -$1k floor",
+                    delta_color="normal" if cf_cash >= -1000 else "inverse",
+                )
+                m2.metric(
+                    f"DSCR CF / mo",
+                    f"${cf_dscr:+,.0f}",
+                    f"30% down @ 7.75%",
+                    delta_color="normal" if cf_dscr >= -1000 else "inverse",
+                )
+                m3.metric(
+                    "5-yr IRR (cash)",
+                    f"{irr*100:.1f}%" if irr else "—",
+                    "beats 8% hurdle" if irr and irr >= 0.08 else "trails 8% hurdle",
+                    delta_color="normal" if irr and irr >= 0.08 else "inverse",
+                )
+                m4.metric("Annual EGI", f"${listing.estimated_egi_annual or 0:,.0f}")
+
+                # ── Detailed pro formas ────────────────────────────────────────
+                with st.expander("📄 Full Pro Forma — Cash Purchase"):
+                    from real_estate_agent.financial.models import (
+                        PropertyInputs, MarketInputs, InsuranceInputs,
+                        OperatingExpenseInputs, FinancingType, MarketType,
+                    )
+                    from real_estate_agent.financial.metrics import calculate_all_metrics
+                    from real_estate_agent.properties.enrichment import (
+                        _market_inputs, _property_inputs, _insurance,
+                    )
+
+                    used_snap = snapshot or MARKETS_BY_ID["nc_crystal_coast_carteret"]
+                    market_in = _market_inputs(used_snap, listing)
+                    prop_in   = _property_inputs(listing, used_snap)
+                    ins       = _insurance(used_snap, listing)
+                    ops       = OperatingExpenseInputs()
+
+                    cash_inputs = ScenarioInputs(
+                        property=prop_in, market=market_in,
+                        financing=FinancingInputs(
+                            financing_type=FinancingType.CASH,
+                            down_payment=listing.price,
+                            interest_rate=0.0, loan_term_years=0,
+                        ),
+                        insurance=ins, operating=ops,
+                        annual_personal_use_weeks=4, hold_period_years=hold_years,
+                    )
+                    cm = calculate_all_metrics(cash_inputs)
+                    exp = cm["expenses"]
+
+                    rc1, rc2 = st.columns(2)
+                    with rc1:
+                        st.markdown("**Revenue**")
+                        st.markdown(f"Annual EGI: **${cm['revenue']['effective_gross_income']:,.0f}**")
+                        st.markdown(f"NOI: **${cm['noi']:,.0f}**")
+                    with rc2:
+                        st.markdown("**Key Metrics**")
+                        st.markdown(f"Annual CF: **${cm['annual_cash_flow']:+,.0f}**")
+                        st.markdown(f"Monthly CF: **${cm['monthly_cash_flow']:+,.0f}**")
+                        st.markdown(f"Cash-on-Cash: **{cm['cash_on_cash_return']*100:.1f}%**")
+                        st.markdown(f"5-yr IRR: **{cm['irr']*100:.1f}%**" if cm['irr'] else "5-yr IRR: —")
+                        st.markdown(f"18-mo net position: **${cm['net_position_18mo']:+,.0f}**")
+
+                    st.markdown("**Expense breakdown**")
+                    exp_df = pd.DataFrame([
+                        {"Item": "Property tax",     "Annual": exp["property_tax"]},
+                        {"Item": "Insurance (total)","Annual": exp["insurance_total"]},
+                        {"Item": "HOA",              "Annual": exp["hoa"]},
+                        {"Item": "Utilities",        "Annual": exp["utilities"]},
+                        {"Item": "Landscaping",      "Annual": exp["landscaping"]},
+                        {"Item": "Cleaning/turnover","Annual": exp["cleaning_turnover"]},
+                        {"Item": "Maintenance reserve", "Annual": exp["maintenance_reserve"]},
+                        {"Item": "CapEx reserve",    "Annual": exp["capex_reserve"]},
+                        {"Item": "STR licensing",    "Annual": exp["str_licensing"]},
+                        {"Item": "Accounting",       "Annual": exp["accounting"]},
+                    ])
+                    st.dataframe(
+                        exp_df,
+                        column_config={"Annual": st.column_config.NumberColumn("Annual", format="$%d")},
+                        use_container_width=True, hide_index=True,
+                    )
+
+                with st.expander(f"📄 Full Pro Forma — DSCR Loan ({down_pct}% down @ {dscr_rate}%)"):
+                    down_amt = listing.price * (down_pct / 100)
+                    dscr_inputs = ScenarioInputs(
+                        property=prop_in, market=market_in,
+                        financing=FinancingInputs(
+                            financing_type=FinancingType.DSCR,
+                            down_payment=down_amt,
+                            interest_rate=dscr_rate / 100,
+                            loan_term_years=30,
+                        ),
+                        insurance=ins, operating=ops,
+                        annual_personal_use_weeks=4, hold_period_years=hold_years,
+                    )
+                    dm = calculate_all_metrics(dscr_inputs)
+
+                    dr1, dr2 = st.columns(2)
+                    with dr1:
+                        st.markdown("**Financing**")
+                        st.markdown(f"Down payment: **${down_amt:,.0f}** ({down_pct}%)")
+                        st.markdown(f"Loan: **${listing.price - down_amt:,.0f}** @ {dscr_rate}%")
+                        st.markdown(f"Monthly P&I: **${dm['expenses']['mortgage_monthly']:,.0f}**")
+                        st.markdown(f"Cash to close: **${dm['cash_to_close']:,.0f}**")
+                    with dr2:
+                        st.markdown("**Key Metrics**")
+                        st.markdown(f"Monthly CF: **${dm['monthly_cash_flow']:+,.0f}**")
+                        dscr_val = dm['dscr']
+                        dscr_label = f"{dscr_val:.2f}x" if dscr_val != float('inf') else "N/A"
+                        pass_fail = "✅ PASSES" if dm['dscr_passes_lender_min'] else "❌ FAILS lender min 1.1x"
+                        st.markdown(f"DSCR: **{dscr_label}** — {pass_fail}")
+                        st.markdown(f"5-yr IRR: **{dm['irr']*100:.1f}%**" if dm['irr'] else "5-yr IRR: —")
+                        hurdle_label = f"${dm['hurdle_fv_5yr']:,.0f} (gain ${dm['hurdle_gain_5yr']:,.0f})"
+                        st.markdown(f"8% hurdle ({hold_years}yr): **{hurdle_label}**")
+
+                # ── Property score ─────────────────────────────────────────────
+                if snapshot:
+                    st.divider()
+                    st.subheader("📊 Investment Score")
+                    ms = score_market(snapshot)
+                    factors = score_property(listing, ms)
+                    composite = sum(f.weighted for f in factors)
+                    rec = recommendation(composite)
+
+                    sc1, sc2 = st.columns([1, 3])
+                    sc1.metric("Score", f"{composite:.1f}/100", rec)
+
+                    fdf2 = pd.DataFrame([{
+                        "Factor": f.name,
+                        "Score": f"{f.score:.0f}/100",
+                        "Weight": f"{f.weight:.0%}",
+                        "Contribution": f"{f.weighted:.1f} pts",
+                        "Note": f.note,
+                    } for f in factors])
+                    sc2.dataframe(fdf2, use_container_width=True, hide_index=True)
+
+                # ── Listing link ───────────────────────────────────────────────
+                if listing.url and listing.url.startswith("http"):
+                    st.markdown(f"[View on Zillow →]({listing.url})")
