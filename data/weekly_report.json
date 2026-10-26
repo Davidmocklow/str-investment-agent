@@ -1,6 +1,6 @@
 {
-  "scan_date": "2026-10-19",
-  "scan_timestamp": "2026-10-19T19:41:45.826533+00:00",
+  "scan_date": "2026-10-26",
+  "scan_timestamp": "2026-10-26T19:46:47.237635+00:00",
   "summary": {
     "markets_scored": 13,
     "properties_scanned": 20,
@@ -2431,14 +2431,14 @@
     "immediate": [],
     "weekly": [
       {
-        "alert_id": "nc_obx_dare__mkt_adr_surge__2026-10-19",
+        "alert_id": "nc_obx_dare__mkt_adr_surge__2026-10-26",
         "severity": "medium",
         "alert_type": "mkt_adr_surge",
         "market_name": "Outer Banks (Dare County)",
         "title": "ADR surging in Outer Banks (Dare County): +12.4% \u2014 raise prices or sell signal",
         "body": "ADR in Outer Banks (Dare County) jumped 12.4% to $415. If you own here: raise nightly rates immediately. If prospective buyer: market strengthening, but competition for inventory will increase.",
         "action_required": "If owner: update nightly rates now. If prospective: accelerate property search.",
-        "triggered_at": "2026-10-19",
+        "triggered_at": "2026-10-26",
         "url": null,
         "is_new": true,
         "positive": true,
@@ -2447,14 +2447,14 @@
         "metric_after": 415.0
       },
       {
-        "alert_id": "sc_myrtle_beach_horry__mkt_adr_drop__2026-10-19",
+        "alert_id": "sc_myrtle_beach_horry__mkt_adr_drop__2026-10-26",
         "severity": "medium",
         "alert_type": "mkt_adr_drop",
         "market_name": "Myrtle Beach (Grand Strand)",
         "title": "ADR moderately lower in Myrtle Beach (Grand Strand): -8.0%",
         "body": "ADR slipped 8.0% from $250 to $230. Monitor next 2 weeks.",
         "action_required": "Watch for continued decline before adjusting strategy.",
-        "triggered_at": "2026-10-19",
+        "triggered_at": "2026-10-26",
         "url": null,
         "is_new": true,
         "positive": false,
@@ -2545,14 +2545,14 @@
         "metric_after": null
       },
       {
-        "alert_id": "nc_obx_dare__mkt_adr_surge__2026-10-19",
+        "alert_id": "nc_obx_dare__mkt_adr_surge__2026-10-26",
         "severity": "medium",
         "alert_type": "mkt_adr_surge",
         "market_name": "Outer Banks (Dare County)",
         "title": "ADR surging in Outer Banks (Dare County): +12.4% \u2014 raise prices or sell signal",
         "body": "ADR in Outer Banks (Dare County) jumped 12.4% to $415. If you own here: raise nightly rates immediately. If prospective buyer: market strengthening, but competition for inventory will increase.",
         "action_required": "If owner: update nightly rates now. If prospective: accelerate property search.",
-        "triggered_at": "2026-10-19",
+        "triggered_at": "2026-10-26",
         "url": null,
         "is_new": true,
         "positive": true,
@@ -2561,14 +2561,14 @@
         "metric_after": 415.0
       },
       {
-        "alert_id": "sc_myrtle_beach_horry__mkt_adr_drop__2026-10-19",
+        "alert_id": "sc_myrtle_beach_horry__mkt_adr_drop__2026-10-26",
         "severity": "medium",
         "alert_type": "mkt_adr_drop",
         "market_name": "Myrtle Beach (Grand Strand)",
         "title": "ADR moderately lower in Myrtle Beach (Grand Strand): -8.0%",
         "body": "ADR slipped 8.0% from $250 to $230. Monitor next 2 weeks.",
         "action_required": "Watch for continued decline before adjusting strategy.",
-        "triggered_at": "2026-10-19",
+        "triggered_at": "2026-10-26",
         "url": null,
         "is_new": true,
         "positive": false,
